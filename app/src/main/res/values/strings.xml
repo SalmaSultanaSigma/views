@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">viewComponents</string>
+    <string name="op1">Option 1</string>
+    <string name="op2">Option 2</string>
+    <string name="op3">Option 3</string>
+    <string name="op4">Option 4</string>
+    <string name="anyop1">Choose an option</string>
+    <string name="clear">Clear option</string>
+    <string name="ratingScore">Rating: 0</string>
+
 </resources>
