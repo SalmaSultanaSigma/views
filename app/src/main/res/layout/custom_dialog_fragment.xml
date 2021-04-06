@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvHeadMessage"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="@string/tvHeadSMS"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeadMessage">
+
+        <RadioButton
+            android:id="@+id/excitentRadioButton"
+            android:layout_width="324dp"
+            android:layout_height="54dp"
+            android:text="@string/ExcillentRadioButton"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/veryGoodRadioButton"
+            android:layout_width="324dp"
+            android:layout_height="54dp"
+            android:text="@string/veryGoodRadioButton"
+            android:textSize="20dp"
+            />
+
+        <RadioButton
+            android:id="@+id/goodRadioButton"
+            android:layout_width="324dp"
+            android:layout_height="54dp"
+            android:text="@string/gooRadioButton"
+            android:textSize="20dp"
+            />
+
+        <RadioButton
+            android:id="@+id/satisfactoryRadioButton"
+            android:layout_width="324dp"
+            android:layout_height="54dp"
+            android:text="@string/satisfactoryRadioButton"
+            android:textSize="20dp"
+            />
+
+        <RadioButton
+            android:id="@+id/poorRadioButton"
+            android:layout_width="324dp"
+            android:layout_height="54dp"
+            android:text="@string/poorRadioButton"
+            android:textSize="20dp"
+            />
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginLeft="108dp"
+        android:layout_marginTop="88dp"
+        android:background="@color/purple_200"
+        android:text="@string/btnSubmit"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnCancel"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.077" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="96dp"
+        android:background="@color/red"
+        android:text="@string/btnCancet"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.048" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

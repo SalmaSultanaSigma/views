@@ -1,10 +1,14 @@
 package com.example.viewcomponents
 
+import android.content.DialogInterface
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.renderscript.ScriptGroup
 import android.widget.*
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AlertDialog
 import com.example.viewcomponents.databinding.ActivityMainBinding
 
 
@@ -16,31 +20,34 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-       binding.radioGroup.setOnCheckedChangeListener { radioGroup, checkedId ->
-           var rb=findViewById<RadioButton>(checkedId)
-           if(rb!=null) {
-               binding.textView2.setText(rb.text.toString())
-           }
-       }
-        binding.button2.setOnClickListener {
-            binding.radioGroup.clearCheck()
-            binding.textView2.setText("Choose an option")
-        }
-        binding.toggleButton.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if(isChecked){
-                Toast.makeText(this,"button on", Toast.LENGTH_SHORT).show()
-                binding.rootLayout.setBackgroundColor(Color.GRAY)
-            }else {
-                Toast.makeText(this, "button off", Toast.LENGTH_SHORT).show()
-                binding.rootLayout.setBackgroundColor(Color.CYAN)
-            }
 
+        binding.btnRadio.setOnClickListener {
+            var intent=Intent(this,RadioButtonActivity::class.java)
+            startActivity(intent)
         }
-        binding.switch1.setOnCheckedChangeListener { compoundButton, isChecked ->
-            if(isChecked){
-                binding.switch1.setBackgroundColor(Color.GREEN)
-            }else
-                binding.switch1.setBackgroundColor(Color.RED)
+
+        binding.btnRatingSeek.setOnClickListener {
+            var intent=Intent(this, RatingBarAndSeekBar::class.java)
+            startActivity(intent)
+        }
+        binding.btnDateTime.setOnClickListener {
+            var intent=Intent(this,WhatTime::class.java)
+            startActivity(intent)
+        }
+        binding.btnRateMe.setOnClickListener {
+            var dialog=CustomDialogFragment()
+            dialog.show(supportFragmentManager,"customDialog")
         }
     }
+
+    override fun onBackPressed() {
+        val builder= AlertDialog.Builder(this)
+        builder.setTitle("Are you sure ?")
+        builder.setMessage("Do you want to close the app ?")
+        builder.setPositiveButton("Yes",{ dialogInterface: DialogInterface, i: Int ->
+            finish()
+        })
+        builder.setNegativeButton("No",{ dialogInterface: DialogInterface, i: Int -> }).show()
+    }
+
 }

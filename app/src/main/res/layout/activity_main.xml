@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -10,87 +9,45 @@
     android:paddingTop="20dp"
     tools:context=".MainActivity">
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/op1" />
-
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/op2" />
-
-        <RadioButton
-            android:id="@+id/radioButton3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/op3" />
-
-        <RadioButton
-            android:id="@+id/radioButton4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/op4" />
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="126dp"
-        android:layout_height="36dp"
-        android:gravity="center"
-        android:text="@string/anyop1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.472"
-        app:layout_constraintStart_toEndOf="@+id/radioGroup"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.12" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnRadio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="@string/btnRadioToogleSwitch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnRatingSeek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnRatingSeek"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRadio" />
+
+    <Button
+        android:id="@+id/btnDateTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnShowDateTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRatingSeek" />
+
+    <Button
+        android:id="@+id/btnRateMe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="@string/clear"
+        android:layout_marginBottom="16dp"
+        android:text="@string/btnRateMe"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.631"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ToggleButton
-        android:id="@+id/toggleButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="ToggleButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/switch1"
-        app:layout_constraintHorizontal_bias="0.143"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="125dp"
-        android:layout_height="42dp"
-        android:text="Switch"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.807"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.377" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

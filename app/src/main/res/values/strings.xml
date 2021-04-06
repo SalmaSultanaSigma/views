@@ -7,5 +7,23 @@
     <string name="anyop1">Choose an option</string>
     <string name="clear">Clear option</string>
     <string name="ratingScore">Rating: 0</string>
+    <string name="tvRating">Rating Value: 0</string>
+    <string name="tvSeekBar">Value: 0</string>
+    <string name="btnSwirch">Switch</string>
+    <string name="btnToogle">Toogle Button</string>
+    <string name="btnRadioToogleSwitch">Radio Button / Toogle Button / Switch</string>
+    <string name="btnRatingSeek">Rating bar / Seek Bar</string>
+    <string name="btnTimeDate">What time now ?</string>
+    <string name="btnShowDateTime">Show Date and Time</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tvHeadSMS">Your rating matters</string>
+    <string name="ExcillentRadioButton">Excellent</string>
+    <string name="veryGoodRadioButton">Very Good</string>
+    <string name="gooRadioButton">Good</string>
+    <string name="satisfactoryRadioButton">Satisfactory</string>
+    <string name="poorRadioButton">Poor</string>
+    <string name="btnSubmit">Submit</string>
+    <string name="btnCancet">Cancel</string>
+    <string name="btnRateMe">Rate Me</string>
 
 </resources>
