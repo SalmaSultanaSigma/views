@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ViewComponents">
-        <activity android:name=".WhatTime" android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".RecyclerViewPage" android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".WhatTime"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".RatingBarAndSeekBar"
             android:parentActivityName=".MainActivity" />

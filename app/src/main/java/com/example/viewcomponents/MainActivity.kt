@@ -9,6 +9,8 @@ import android.renderscript.ScriptGroup
 import android.widget.*
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AlertDialog
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.viewcomponents.databinding.ActivityMainBinding
 
 
@@ -20,6 +22,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
 
         binding.btnRadio.setOnClickListener {
             var intent=Intent(this,RadioButtonActivity::class.java)
@@ -38,6 +42,13 @@ class MainActivity : AppCompatActivity() {
             var dialog=CustomDialogFragment()
             dialog.show(supportFragmentManager,"customDialog")
         }
+
+        binding.btnRecyclerView.setOnClickListener {
+            var intent=Intent(this,RecyclerViewPage::class.java)
+            startActivity(intent)
+        }
+
+
     }
 
     override fun onBackPressed() {
