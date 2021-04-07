@@ -47,6 +47,10 @@ class MainActivity : AppCompatActivity() {
             var intent=Intent(this,RecyclerViewPage::class.java)
             startActivity(intent)
         }
+        binding.btnViewPager2.setOnClickListener {
+            var intent= Intent(this,ViewPager2::class.java)
+            startActivity(intent)
+        }
 
 
     }
